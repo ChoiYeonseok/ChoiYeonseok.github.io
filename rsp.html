@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<title> 가위바위보 게임 </title>
+</head>
+<body>
+<script>
+	document.write('다시 하고싶으시면 새로고침을 누르세요.');
+	var choice = prompt("가위, 바위, 보 중에 하나를 입력하세요.");
+	var MyChoice;
+
+	switch(choice){
+		case "가위":
+			MyChoice = 1;
+			break;
+		case "바위":
+			MyChoice = 2;
+			break;
+		case "보":
+			MyChoice = 3;
+			break;
+		default:
+			alert("가위, 바위, 보 중 하나를 입력해주세요.")
+			location.reload();
+
+	};
+
+	var ComSelect = Math.ceil(Math.random() * 3);
+
+	if (MyChoice == 1) {
+		if (ComSelect == 1) {
+				alert("비겼습니다.")
+		} else if (ComSelect == 2) {
+				alert('당신이 졌습니다.')
+		} else if (ComSelect == 3) {
+				alert('당신이 이겼습니다.')
+		}
+	}
+	if (MyChoice == 2) {
+		if (ComSelect == 1) {
+			alert("당신이 이겼습니다.")
+		} else if (ComSelect == 2) {
+			alert('비겼습니다.')
+		} else if (ComSelect == 3) 
+			alert('당신이 졌습니다.')
+		}
+	if (MyChoice == 3) {
+		if (ComSelect == 1) {
+			alert("당신이 졌습니다.")
+		} else if (ComSelect == 2) {
+			alert('당신이 이겼습니다.')
+		} else if (ComSelect == 3) 
+			alert('비겼습니다.')
+		}
+</script>
+</body>
+</HTML>

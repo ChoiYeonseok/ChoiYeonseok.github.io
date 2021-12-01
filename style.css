@@ -1,0 +1,93 @@
+html, body { margin:0; padding:0; height:100% }
+body {background-color: #FFFFFF;}
+.header {width: 100%; height: 10%;}
+.introduce {line-height: 30%;}
+.korean_introduce {
+	font-style: italic; 
+	text-align: center; 
+	font-family: 맑은 고딕;
+}
+#nav {
+	list-style: none;
+	height: 40px;
+	padding: 5px 1px;
+	margin: 0;
+	background: #F0F0F0;
+}
+#nav li{
+	float: left;
+	position: relative;
+	margin: 3px 250px;
+	padding: 0;
+}
+#nav li a{
+	display: block;
+	font-family: '맑은 고딕';
+	font-weight: bold;
+	font-size: 20px;
+	color: #00A6A4;
+	padding: 7px 8px;
+	margin: 0;
+	text-decoration: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+#nav li:hover > a {
+	background: #C9C9CA;
+	color: black;
+	margin: 0;
+	padding: 5px;
+}
+#nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: 40px;
+	width: 150px;
+	background: #F7F9FA;
+	text-align: center;
+	opacity: 0;
+}
+#nav li:hover ul{
+	opacity: 1;
+}
+#nav li:hover ul li{
+	height: 35px;
+	overflow: visible;
+	padding: 0;
+}
+#nav ul li{
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+#nav ul a{
+	font-weight: normal;
+	color: black;
+}
+#nav ul li:hover a{
+	background: #C9C9CA;
+	font-weight: bold;
+}
+h3 {
+	text-align: center; 
+	color: #00A6A4; 
+	font-family: sans-serif; 
+	font-size: 24pt;
+}
+#maintitle{
+	color: #00A6A4;
+	text-decoration: none;
+}
+
+hr {border-color: #00A6A4}
+iframe {
+	dispaly: block;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	height: 100vh;
+	width: 100vw;
+}
+

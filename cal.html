@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Cal </title>
+	<style>
+		table {border-collapse: collapse;}
+		td {padding: 5px 10px; text-align: center;}
+		input {text-align: right; border: none;}
+		input:focus {outline: none;}
+	</style>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td colspan="4">
+				<input type="text" id="disp">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<input type="text" id="result">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" onclick="reset()">AC</td>
+			<td onclick="add('/')">/</td>
+		<tr>
+			<td onclick="add(7)">7</td>
+			<td onclick="add(8)">8</td>
+			<td onclick="add(9)">9</td>
+			<td onclick="add('*')">*</td>
+		</tr>
+		<tr>
+			<td onclick="add(4)">4</td>
+			<td onclick="add(5)">5</td>
+			<td onclick="add(6)">6</td>
+			<td onclick="add('-')">-</td>
+		</tr>
+		<tr>
+			<td onclick="add(1)">1</td>
+			<td onclick="add(2)">2</td>
+			<td onclick="add(3)">3</td>
+			<td onclick="add('+')">+</td>
+		</tr>
+		<tr>
+			<td onclick="add(0)" colspan='2'>0</td>
+			<td onclick="add('.')">.</td>
+			<td onclick="cal()">=</td>
+		</tr>
+	</table><br>
+	<h5> 숫자가 아닌 다른 수를 입력하지 마세요. </h5>
+
+	<script>
+		function add(num) {
+			var disp = document.getElementById('disp');
+			disp.value = disp.value + num;
+		}
+		function cal(){
+			var disp = document.getElementById('disp');
+			var result = eval(disp.value);
+			document.getElementById('result').value = result;
+		}
+		function reset(){
+			document.getElementById('disp').value="";
+			document.getElementById('result').value="";
+		}
+	</script>
+</body>
+</html>
+

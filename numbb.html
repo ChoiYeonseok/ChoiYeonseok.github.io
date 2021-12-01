@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<title>숫자 야구</title>
+</head>
+<body>
+	<h2>숫자야구</h2><br>
+	컴퓨터가 정한 3자리의 숫자를 맞춰보세요.<br>
+	<hr>
+	<br>
+	숫자: <input type="text" id="player_input" width="200px" height="50px"> <input type="button" value="입력" onclick="playball();"><br>
+	<p id="result"></p>
+
+
+
+	<script>
+		var num = ['1','2','3','4','5','6','7','8','9'];
+		var num_array = [];
+		for (var i=0; i<3; i++){
+			var randomize = Math.floor(Math.random() * num.length);
+			num_array[i] = num.splice(randomize, 1)[0];
+			console.log(num_array)
+			}
+
+		function playball() {
+			var count = 0;
+			var	strike = 0;
+			var ball = 0;
+
+			while (count < 10) {
+				var p_input = document.getElementById('player_input').value;
+				var input_array = p_input.split('');
+				console.log(input_array)
+				strike = 0;
+				ball = 0;
+				count++;
+  				for (var j = 0; j < 3; j++) {
+    				for (var k = 0; k < 3; k++) {
+      					if (num_array[j] == input_array[k]) {
+        					if (j === k) {
+          						strike++;
+        					} else {
+          						ball++;
+        					}
+        						break;
+      						}
+   			 			}
+		  		}
+				if (strike == 3){
+					document.getElementById("result").innerHTML= '홈런!';	
+				break;
+				} else if (count >= 10){
+					document.getElementById("result").innerHTML= '시도 횟수를 초과하셨습니다.';
+				break;
+				} else {
+					document.getElementById("result").innerHTML= input_array.join('') + ': ' + strike + '스트라이크' + ball + '볼 입니다.';
+				break;
+			}
+		}
+		}
+	</script>
+	</body>
+	</HTML>
+
+		
